@@ -42,7 +42,7 @@ jobs:
       statuses: 'read'
       packages: 'read'
     timeout-minutes: 20
-    runs-on: 'ubuntu-latest'
+    runs-on: tenki-standard-medium-4c-8g
     outputs:
       duplicate_issues_csv: '${{ env.DUPLICATE_ISSUES_CSV }}'
     steps:
@@ -169,7 +169,7 @@ jobs:
     permissions:
       issues: 'write'
     timeout-minutes: 5
-    runs-on: 'ubuntu-latest'
+    runs-on: tenki-standard-medium-4c-8g
     steps:
       - name: 'Generate GitHub App Token'
         id: 'generate_token'
