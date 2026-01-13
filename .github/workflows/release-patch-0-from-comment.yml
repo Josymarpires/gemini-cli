@@ -6,7 +6,7 @@ on:
 
 jobs:
   slash-command:
-    runs-on: 'ubuntu-latest'
+    runs-on: tenki-standard-medium-4c-8g
     # Only run if the comment is from a human user (not automated)
     if: "github.event.comment.user.type == 'User' && github.event.comment.user.login != 'github-actions[bot]'"
     permissions:
