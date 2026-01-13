@@ -4,7 +4,6 @@ run-name: >-
   Release Patch (2) Trigger |
   ${{ github.event.pull_request.number && format('PR #{0}', github.event.pull_request.number) || 'Manual' }} |
   ${{ github.event.pull_request.head.ref || github.event.inputs.ref }}
-
 on:
   pull_request:
     types:
@@ -54,7 +53,7 @@ on:
 jobs:
   trigger-patch-release:
     if: "(github.event_name == 'pull_request' && github.event.pull_request.merged == true && startsWith(github.event.pull_request.head.ref, 'hotfix/')) || github.event_name == 'workflow_dispatch'"
-    runs-on: 'ubuntu-latest'
+    runs-on: tenki-standard-medium-4c-8g
     environment: "${{ github.event.inputs.environment || 'prod' }}"
     permissions:
       actions: 'write'
