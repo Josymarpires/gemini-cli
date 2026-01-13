@@ -42,7 +42,7 @@ on:
 
 jobs:
   release:
-    runs-on: 'ubuntu-latest'
+    runs-on: tenki-standard-medium-4c-8g
     environment: "${{ github.event.inputs.environment || 'prod' }}"
     permissions:
       contents: 'write'

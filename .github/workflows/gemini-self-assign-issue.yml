@@ -26,7 +26,7 @@ jobs:
       github.repository == 'google-gemini/gemini-cli' &&
       github.event_name == 'issue_comment' &&
       contains(github.event.comment.body, '/assign')
-    runs-on: 'ubuntu-latest'
+    runs-on: tenki-standard-medium-4c-8g
     steps:
       - name: 'Generate GitHub App Token'
         id: 'generate_token'
