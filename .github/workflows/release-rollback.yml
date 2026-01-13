@@ -43,7 +43,7 @@ on:
 jobs:
   change-tags:
     environment: "${{ github.event.inputs.environment || 'prod' }}"
-    runs-on: 'ubuntu-latest'
+    runs-on: tenki-standard-medium-4c-8g
     permissions:
       packages: 'write'
       issues: 'write'
