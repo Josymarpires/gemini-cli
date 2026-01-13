@@ -5,10 +5,9 @@ on:
   schedule:
     - cron: '45 1 * * *'
   workflow_dispatch:
-
 jobs:
   no-response:
-    runs-on: 'ubuntu-latest'
+    runs-on: tenki-standard-medium-4c-8g
     if: |-
       ${{ github.repository == 'google-gemini/gemini-cli' }}
     permissions:
