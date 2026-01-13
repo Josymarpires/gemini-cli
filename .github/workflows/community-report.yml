@@ -15,7 +15,7 @@ jobs:
     name: 'Generate Report 📝'
     if: |-
       ${{ github.repository == 'google-gemini/gemini-cli' }}
-    runs-on: 'ubuntu-latest'
+    runs-on: tenki-standard-medium-4c-8g
     permissions:
       issues: 'write'
       pull-requests: 'read'
